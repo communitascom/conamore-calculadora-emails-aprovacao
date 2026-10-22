@@ -98,7 +98,7 @@ const FL={
   ex:'Porte grande: aviso à equipe Conamore e tarefa no CRM no mesmo dia, junto com o N1, e a régua pausa. Quem chega ao fim sem abrir nem clicar em nenhum e-mail recebe a tag lead-frio. Saem também: WhatsApp clicado, negócio aberto, compra ou descadastro.'}
 };
 const FN={rel:'Relacionamento',edu:'Educação',ven:'Venda',pes:'Conversa pessoal'};
-function render(e){let h=e.html;for(const k in D.imgs)h=h.split('@@'+k+'@@').join(D.imgs[k]);for(const k in D.sample)h=h.split(k).join(D.sample[k]);return h;}
+function render(e){let h=e.html.replace('<head>','<head><base target="_blank">');for(const k in D.imgs)h=h.split('@@'+k+'@@').join(D.imgs[k]);for(const k in D.sample)h=h.split(k).join(D.sample[k]);return h;}
 function esc(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;')}
 function sub(s){for(const k in D.sample)s=s.split(k).join(D.sample[k]);return s;}
 function showMeta(e){
