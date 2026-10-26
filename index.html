@@ -73,17 +73,16 @@ tr:last-child td{border-bottom:0}
 .pill{display:inline-block;font:700 11px 'Montserrat';border-radius:99px;padding:3px 10px;background:var(--blue-soft);color:var(--blue);white-space:nowrap}
 .segnote{margin-top:14px;font-size:14px;color:var(--ink2);max-width:80ch}
 .hide{display:none}
-.top{display:flex;align-items:flex-start;justify-content:space-between;gap:16px;flex-wrap:wrap}
-.btn{display:inline-flex;align-items:center;gap:8px;font:600 14px 'Montserrat';text-decoration:none;background:var(--blue);color:#fff;border-radius:99px;padding:10px 20px}
-.btn:hover{filter:brightness(1.08)}
-:root[data-theme="dark"] .btn{color:#0d1320}
-@media(prefers-color-scheme:dark){:root:not([data-theme="light"]) .btn{color:#0d1320}}
+.bar{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:26px 0 18px}
+.bar .tabs{margin:0}
+.btn{display:inline-flex;align-items:center;gap:6px;font:600 14px 'Montserrat';text-decoration:none;border:1.5px solid var(--blue);background:transparent;color:var(--blue);border-radius:99px;padding:9px 18px}
+.btn:hover{background:var(--blue-soft)}
 .btn:focus-visible{outline:3px solid var(--blue-soft);outline-offset:2px}
 .meta a{color:var(--blue);font-weight:600}
 </style>
 <div class="wrap">
- <div class="top"><h1>Calculadora de Enxoval: as duas réguas de e-mail</h1><a class="btn" href="https://drive.google.com/drive/folders/1ON0jvcEnyuJO94_WgF3XzIgtpXZisswK" target="_blank" rel="noopener">Pasta de exportação dos e-mails ↗</a></div>
- <div class="tabs" role="tablist"><button role="tab" id="t-base" aria-selected="true">Régua 1 · Base (13)</button><button role="tab" id="t-novos" aria-selected="false">Régua 2 · Novos leads (8)</button></div>
+ <h1>Calculadora de Enxoval: as duas réguas de e-mail</h1>
+ <div class="bar"><div class="tabs" role="tablist"><button role="tab" id="t-base" aria-selected="true">Régua 1 · Base (13)</button><button role="tab" id="t-novos" aria-selected="false">Régua 2 · Novos leads (8)</button></div><a class="btn" href="https://drive.google.com/drive/folders/1ON0jvcEnyuJO94_WgF3XzIgtpXZisswK" target="_blank" rel="noopener">Pasta de exportação dos e-mails ↗</a></div>
  <div id="flow"></div>
  <div id="v-mail" class="layout"><div class="list" id="list"></div><div class="panel"><div class="meta" id="meta"></div><div class="dev"><span>Tela</span><button id="d-desk" aria-pressed="true">Computador</button><button id="d-mob" aria-pressed="false">Celular</button></div><div class="stage"><iframe id="fr" title="Pré-visualização do e-mail" width="700"></iframe></div></div></div>
 </div>
